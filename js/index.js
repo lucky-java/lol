@@ -6,7 +6,7 @@ $(function(){
         data: {uid:34468},
         dataType: "json",
         success: function (data) {
-            console.log(data);
+            //console.log(data);
             if(data.msg){
                 showList(data.data);
             }

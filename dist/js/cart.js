@@ -78,6 +78,7 @@ $(function(){
                         $.ajax({
                             type: "get",
                             url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
+                            async:false,
                             data: {
                                 uid :user.id,
                                 pid : pid,
@@ -87,7 +88,7 @@ $(function(){
                             success: function (data) {
                                 console.log(data);
                                 // if(data.code == 1){
-                                //     window.location.reload();
+                                     window.location.reload();
                                 // } 
                             }
                         });
@@ -108,6 +109,7 @@ $(function(){
                         $.ajax({
                             type: "get",
                             url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
+                            async:false,
                             data: {
                                 uid :user.id,
                                 pid : pid,
@@ -116,7 +118,7 @@ $(function(){
                             dataType: "json",
                             success: function (data) {
                                 // if(data.code == 1){
-                                //     window.location.reload();
+                                   window.location.reload();
                                 // } 
                             }
                         });
@@ -216,6 +218,7 @@ $(function(){
             return tolalPrice;
         }  
     }
+    //获取用户某个商品的数量
     function getTotalNum(pid){
         var num = 0;
         if(userStr){
@@ -294,8 +297,7 @@ $(function(){
     }
     $("#del_cart").click(function(){
         cleanCart();
-       
-       // window.location.reload();
+        //window.location.reload();
     });
     //清空购物车
     function cleanCart(){
@@ -318,48 +320,34 @@ $(function(){
                                 },
                                 dataType: "json",
                                 success: function (data) {
-                                    console.log(data);
                                     
                                 }
                             });
                         }
-                        showList({});
+                        //showList({});
                     }
                 }
             });
         }
     }
-     //window.location.reload();
-     //全选
-    //  allCheck(obj){
-    //     var aCkBtn = document.querySelectorAll("#ck");
-        
-    //     obj.onclick = ()=>{
-    //         for(let i = 0 ; i < aCkBtn.length ; i++){
-    //             aCkBtn[i].checked = obj.checked;
-    //         }
-    //         this.getTotalPrice("SumPrice");
-    //     }
-    //     for(let i = 0 ; i < aCkBtn.length ; i++){
-    //         aCkBtn[i].onclick = ()=>{
-    //             var num = 0;
-    //             for(let j = 0 ; j < aCkBtn.length ; j++){
-    //                 if(aCkBtn[j].checked){
-    //                     num++;
-    //                 }
-    //             }             
-    //             if(num == aCkBtn.length){
-    //                 obj.checked = true;
-    //             }else{
-    //                 obj.checked = false;
-    //             }
-    //             this.getTotalPrice("SumPrice");                  
-    //         }           
-    //     }
-    // }
-    var HtmlStr = $("#cart-shop-list");
-    //console.log(HtmlStr);
-    function allCheck(obj){
-        
+    //获取全部的商品数量
+    function getAllTotalNum(id){
+        var num = 0;
+            $.ajax({
+                type: "get",
+                url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
+                async:false,
+                data: {
+                    id:id,
+                },
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+                    for(let i in data.data){
+                        num += Number(data.data[i].pnum);        
+                    }
+                }
+            });
+            return num;
     }
 })
