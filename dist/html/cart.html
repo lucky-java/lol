@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车页面</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="navbar lor_topbar">
+        <div class="lor_top clearfix">
+            <div class="lor_logobar fl">
+                <a class="navbar-brand logo" href="index.html" title="英雄联盟周边商城"></a>
+            </div>
+            <div class="lor_top_mem fr">
+                <div class="login-bar">
+                    <div id="logined" class="fl logined-box calearfix lor_loginbox"style="display:none;">
+                        <span>欢迎您，</span>
+                        <div class="fl login-user clearfix">
+                            <span id="login_userFace_span" style="display: none;"></span>
+                            <span id="login_userName_sapn">浅浅</span>
+                            <b id="login_nickname_span"></b>
+                            <i class="fl ico-menu marr1"></i>
+                            <div class="menu-downbox">
+                                <div class="downbox-bg"></div>
+                                <ul class="menu-downlist clearfix">
+                                    <li class="first"><a class="downlist-link" href="">我的订单</a></li>
+                                    <li><a class="downlist-link" href="">我的收藏</a></li>
+                                    <li><a class="downlist-link" href="">个人信息</a></li>
+                                    <li><a class="downlist-link" href="">领取中心</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <a  class="lor_logout" id="logout">退出</a>
+                    </div>
+                    <a href="login.html" id="unlogin" class="qqlogin lor_unlogin" style="display: block;">
+                       <span class="mtxt">你好,请登录</span> 
+                    </a>
+                    <a href="index.html" class="menu-cart clearfix">
+                       <i class="fl ico-menu mcart"></i>
+                       <span class="mtxt">购物车</span> 
+                       <span class="ico-menu mpoint" id="headerCartNum">0</span>
+                    </a>
+                    <div class="fl menu-ser clearfix" href="javascript:;">
+                        <i class="fl ico-menu mser"></i>
+                        <span class="mtxt kf_comm">客服咨询</span>
+                        <div class="menu-downboxs">
+                            <div class="downbox-bg" s=""></div>
+                        </div>
+                    </div>
+                    <div class="fl lolweixin clearfix">
+                        <i class="fl ico-menu mwxin"></i>
+                        <span class="mtxt">微信商城</span>
+                        <i class="fl ico-menu marrl"></i>
+                        <div class="mwx-code">
+                            <div class="mwx-codebg"></div>
+                            <div class="mwx-codeimg">
+                                <img src="https://js01.daoju.qq.com/zb/lolriotmall/pc/images/wxcode.png" alt="微信二维码"width="83" height="82">
+                            </div>
+                            <p class="mwx-txt">扫码手机购买</p>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </div>
+    <!-- 中间主体部分 -->
+    <div class="mainbar w980 pb30 clearfix">
+        <div class="mulu"></div>
+        <!-- 购物车主区域 -->
+        <div class="buybar clearfix">
+            <div class="buyleft fl">
+                <div id="blk_cart_list">
+                    <div class="buyshop">
+                        <!-- 表头 -->
+                        <ul class="buyli buytop clearf">
+                            <li class="li_inp"><input type="checkbox" name="" id="allcheck">全选</li>
+                            <li class="li_sp">商品数量</li>
+                            <li class="li_dj">单价（元）</li>
+                            <li class="li_sl">数量</li>
+                            <li class="li_jg">小计</li>
+                            <li class="li_zz">操作</li>
+                        </ul>
+                        <div id="cart-shop-list"></div>
+                        <!-- 表尾 -->
+                        <ul class="buy_jix buyli clearf">
+                            <li class="li_inp">
+                                <div class="buy_xuan">
+                                    <!-- <input type="checkbox" name="全选" id="">全选 -->
+                                </div>                                                              
+                            </li>
+                            <li class="li_sp">
+                                <a href="./list.html">继续购物</a>
+                            </li>
+                            <li class="li_dj"></li>
+                            <li class="li_sl"></li>
+                            <li class="li_jg"></li>
+                            <li class="li_zz"><a id="del_cart">清空表购物车</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="buyrightbar fr">
+                <div id="topBox" class="navBox_1" style="top:0px">
+                    <h3>我的购物车</h3>
+                    <div class="buybai">
+                        <div class="buy_youf buybottom">
+                            <span class="cfb6">满199包邮</span>
+                            <span id="isFreeSpan" style="display: none;">您还未满足包邮条件</span>
+                            <div class="buy_you1" style="display: none;">
+                                <span class="fb cfff pl10">未满足</span>
+                                <a onclick="toMao('shophot')">更多人气商品</a>
+                            </div>
+                            <div class="buy_you2">
+                                <span class="fb cfff pl10">已满足</span>
+                                <a onclick="toMao('shophot')">更多人气商品</a>
+                            </div>
+                        </div>
+                        <div class="buy_wen buybottom">
+                            商品数量：<span id="numcount">0</span>
+                            <br>
+                            商品金额：<span class="cfb6">￥<font id="tota" class="cfb6 f16">0.00</font></span>
+                            <a href="javascript:pay();" id="cartPay" class="mt10 buy_bothui">去结算</a>
+                        </div>
+                        <div class="buy-wen">
+                            <div class="buy_baoz clearf">
+                                <div class="fl buy_baozleft">承诺</div>
+                                <div class="fl buy_baozright">
+                                    7天无理由退货
+                                    <br>
+                                    100%官方正品
+                                    <br>
+                                    全场每单满199元包邮
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div id="bottom"></div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        $(function(){
+            if(localStorage.getItem("user")){
+                $("#logined").show();
+                $("#unlogin").hide();
+            }  
+            $("#logout").click(function(){
+                localStorage.setItem("user","");
+                $("#logined").hide();
+                $("#unlogin").show();
+            });
+            $("#bottom").load("bottom.html");
+        })
+    </script>
+</body>
+</html>

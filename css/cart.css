@@ -1,0 +1,341 @@
+/* 通用css */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: "微软雅黑","宋体";
+    font-size: 12px;
+}
+li{
+    list-style: none;
+}
+a{
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+a:link, a:visited {
+    cursor: pointer;
+}
+.fl{
+      float: left;
+  }
+.fr{
+      float: right;
+  }
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearf{
+    overflow: auto;
+    zoom: 1;
+}
+/* 主体部分css */
+.mainbar {
+    background: #FFF;
+    height: auto;
+    padding-top: 16px;
+}
+.pb30 {
+    padding-bottom: 30px;
+}
+.w980 {
+    width: 1190px;
+    margin: 0px auto;
+    height: auto ;
+}
+.mulu{
+    margin: 0px auto;
+    height: 56px;
+    width: 1190px;
+    background: #efefef;
+    color: #666;
+    position: relative;
+}
+.buybar {
+    width: 1190px;
+    margin: 0px auto;
+    height: auto;
+    padding-top: 20px;
+    position: relative;
+    /* background-color: salmon; */
+}
+.buyleft{
+    width: 880px;
+    height: auto;
+    /* background-color: rebeccapurple; */
+}
+.buyshop{
+    margin-bottom: 40px;
+}
+.buyli{
+    width: 880px;
+}
+.buytop{
+    height: 43px;
+    background: #efefef;
+    color: #000;
+}
+.buytop li{
+    line-height: 43px;
+    text-align: center;
+    font-size: 14px;
+}
+.buyli li{
+    float: left;
+}
+.buylist li{
+   text-align: center;
+}
+.buyli li.li_inp{
+    width: 60px;
+}
+/* .buylist li.li_inp{
+    padding-top: 48px;
+} */
+.buyli li.li_sp{
+    width: 348px;
+    text-align: left;
+}
+.buyli li.li_dj{
+    width: 110px;
+}
+.buyli li.li_sl{
+    width: 152px;
+}
+.buylist li.li_sl {
+    padding-top: 44px;
+}
+.buyli li.li_jg{
+    width: 80px;
+}
+.buyli li.li_zz{
+    width: 120px;
+}
+.buy_dianhover{
+    height: 40px;
+    margin-top: 32px;
+    text-indent: 30px;
+    text-align: center;
+}
+.buysp img{
+    width: 88px;
+    height: 88px;
+    float: left;
+    display: block;
+    margin-right: 10px;
+}
+.buysp_wen{
+    width: 210px;
+    height: 96px;
+    color: #666;
+    line-height: 20px;
+}
+.buysp_wen a{
+    line-height: 30px;
+    color: #333;
+    font-size: 14px;
+    display: block;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.f14{
+    font-size: 14px;
+}
+.buylist {
+    border-bottom: 1px solid #e2e2e2;
+}
+.buylist li.li_dj{
+    padding-top: 48px;
+}
+.buylist li.li_jg {
+    padding-top: 48px;
+    color: #666;
+}
+.buysl{
+    width: 90px;
+    margin: 0px auto;
+}
+.buysl a{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    display: block;
+    width: 20px;
+    height: 28px;
+    background: #e7e7e7;
+}
+.buysl a span{
+    padding-left: 5px;
+}
+.buy_inp {
+    height: 26px;
+    line-height: 26px;
+    width: 48px;
+    font-size: 14px;
+    text-align: center;
+    border: 0px;
+        border-top-color: currentcolor;
+        border-top-style: none;
+        border-top-width: 0px;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: 0px;
+    border-top: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+    vertical-align: middle;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+.buylist li.li_zz {
+    padding-top: 48px;
+}
+.c666 {
+    color: #666;
+}
+.buy_jix {
+    height: 43px;
+    background: #fff;
+    color: #000;
+    border-bottom: 1px solid #e2e2e2;
+}
+.buy_jix li.li_sp a {
+    line-height: 43px;
+    color: #ed3029;
+    font-size: 14px;
+}
+.buy_jix li.li_zz a {
+    line-height: 43px;
+    height: 43px;
+    display: block;
+    color: #999;
+    font-size: 12px;
+    text-indent: 44px;
+    background: url(https://js01.daoju.qq.com/zb/lolriotmall/pc/images/buy/delete.jpg) no-repeat 28px center;
+}
+.buy_jix li input{
+    padding-top:48px;
+}
+.buy_xuan{
+    margin-top: 15px;
+    width: 60px;
+    height: 20px;
+    text-indent: 16px;
+    text-align: left;
+}
+/* 购物车右侧 css */
+.buyrightbar {
+    width: 276px;
+}
+.navBox_1 {
+    width: 274px;
+    border: 1px #bababa solid;
+        border-top-color: rgb(186, 186, 186);
+        border-top-style: solid;
+        border-top-width: 1px;
+    border-top: 3px #fa322c solid;
+    padding-bottom: 4px;
+    background: #efefef;
+    float: right;
+}
+.navBox_1 h3 {
+    line-height: 42px;
+    height: 42px;
+    background: url(https://js01.daoju.qq.com/zb/lolriotmall/pc/images/buy/base.jpg) left -124px no-repeat #efefef;
+    font-weight: normal;
+    text-indent: 34px;
+}
+.buybai {
+    background: #FFF;
+    width: 266px;
+    margin: 0px auto;
+    height: auto;
+}
+.buy_youf {
+    width: 240px;
+    padding: 10px 13px;
+    line-height: 26px;
+}
+.buy_wen {
+    width: 240px;
+    padding: 10px 13px;
+    line-height: 26px;
+    color: #666;
+    font-size: 14px;
+}
+.cfb6 {
+    color: #ed3029;
+}
+.buy_you1 {
+    background: url(https://js01.daoju.qq.com/zb/lolriotmall/pc/images/buy/base.jpg) left -173px no-repeat;
+    width: 152px;
+    height: 26px;
+    line-height: 26px;
+    padding-top: 4px;
+}
+.cfff {
+    color: #FFFFFF;
+}
+.pl10 {
+    padding-left: 10px;
+}
+.fb {
+    font-weight: bold;
+}
+.buy_youf a {
+    color: #FFF;
+    text-decoration: underline;
+    padding-left: 22px;
+}
+.buy_you2 {
+    background: url(https://js01.daoju.qq.com/zb/lolriotmall/pc/images/buy/base.jpg) left -205px no-repeat;
+    width: 152px;
+    height: 26px;
+    line-height: 26px;
+    padding-top: 4px;
+}
+.cfb6 {
+    color: #ed3029;
+}
+.f16 {
+    font-size: 16px;
+}
+a.buy_bothui {
+    width: 240px;
+    height: 46px;
+    line-height: 46px;
+    color: #999;
+    display: block;
+    background: #666;
+    font-size: 18px;
+    text-align: center;
+    cursor: inherit;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.buy_baoz {
+    font-size: 12px;
+    padding-top: 0px;
+}
+.buy_baozleft {
+    font-size: 12px;
+    line-height: 60px;
+    width: 60px;
+    text-align: center;
+}
+.buy_baozright {
+    line-height: 20px;
+    border-left: 1px #e3e1e1 solid;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}

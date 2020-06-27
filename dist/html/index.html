@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lol周边商城首页</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../swiper/css/swiper.min.css">
+</head>
+<body>   
+   <!-- 头部 -->
+    <div id="header"></div>
+    <!-- 中部主体 -->
+    <div class="usamainbar wfull clearf">
+        <!-- 轮播广告 -->
+        <div class="swiper-container  ">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <img src="https://game.gtimg.cn/images/daojushop/zb/ad/202006/20200613000834_912219.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img src="https://game.gtimg.cn/images/daojushop/zb/ad/202006/20200617172623_399874.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img src="https://game.gtimg.cn/images/daojushop/zb/ad/202006/20200619181253_885927.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img src="https://game.gtimg.cn/images/daojushop/zb/ad/202006/20200610190601_810232.jpg" alt="">
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- 推荐广告 -->
+        <ul id="blk_rec_list" class="inshoplist">
+        </ul>
+    </div>
+    <!-- 底部 -->
+   <div id="bottom"></div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../swiper/js/swiper.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script>
+        $("#header").load("header.html",()=>{
+            if(localStorage.getItem("user")){
+                $("#logined").show();
+                $("#unlogin").hide();
+            }  
+            $("#logout").click(function(){
+                localStorage.setItem("user","");
+                $("#logined").hide();
+                $("#unlogin").show();
+                //window.onload();    
+            });
+        });
+        $("#bottom").load("bottom.html");
+         var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                autoplay: {
+                    delay: 3000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: true,
+                    },
+                //autoplay:true,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+    </script>
+</body>
+</html>

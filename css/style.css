@@ -1,0 +1,555 @@
+/* 通用 css */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: "微软雅黑","宋体";
+    font-size: 12px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+/* nav csss*/
+.lor_wfull {
+    min-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+.lor_topbar{
+      height: 120px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      overflow: hidden;
+  }
+  .lor_top{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      min-width: 1280px;
+      width: 100%;
+      height: 75px;
+      background: #090909;
+  }
+  .clearfix::after{
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility:hidden;
+  }
+  .clearfix {
+    zoom: 1;
+  }
+  .lor_logobar{
+      margin: 19px 0 0 50px;
+      width: 297px;
+      height: 39px;
+      position: relative;
+  }
+  .clearf {
+    zoom: 1;
+    overflow: auto;
+  }
+  .fl{
+      float: left;
+  }
+  .fr{
+      float: right;
+  }
+  .logo{
+      display: block;
+      width: 297px;
+      height: 39px;
+      background: url(https://js01.daoju.qq.com/zb/lolriotmall/pc/images/ico-menu.png);
+      background-position: -2px -147px;
+  }
+  .lor_top_mem{
+      margin: 22px 25px 0 0;
+      height: 38px;
+      line-height: 30px;
+      color: #a1a1a1;
+      position: relative;
+      font-size: 14px;
+      z-index: 1;
+  }
+  .lor_topbar a:link{
+      cursor: pointer;
+  }
+  .lor_topbar a{
+      text-decoration: none;
+  }
+  .lor_top_mem a{
+      color: #a1a1a1;
+      float: left;
+      padding-right: 20px;
+      position: relative;
+      z-index: 2;
+  }
+  .lor_top_mem span{
+      display: block;
+      float: left;
+      padding-right: 6px;
+  }
+  .lor_top_mem a.menu-cart .mpoint {
+      margin: 7px 0 0 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      background-position: -2px -287px;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+  }
+  .lor_top_mem .ico-menu {
+      background: url(https://js01.daoju.qq.com/zb/lolriotmall/pc/images/ico-menu.png) no-repeat;
+          background-position-x: 0%;
+          background-position-y: 0%;
+  }
+  .lor_top_mem .menu-ser, .lor_top_mem .lolweixin {
+      padding-right: 28px;
+      height: auto;
+      position: relative;
+      cursor: pointer;
+  }
+  .lor_top_mem .menu-ser .mser {
+      margin: 3px 4px 0 0;
+      display: block;
+      width: 24px;
+      height: 26px;
+      background-position: -2px -383px;
+  }
+  .lor_top_mem a.menu-cart .mcart {
+      margin: 3px 4px 0 0;
+      display: block;
+      width: 28px;
+      height: 25px;
+      background-position: -2px -13px;
+  }
+  .lor_top_mem .login-bar .mwx-code{
+      display: none;
+  }
+  .lor_top_mem .login-bar .marrl {
+      position: absolute;
+      top: 12px;
+      right: 25px;
+      z-index: 1;
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-position: -32px 0;
+  }
+  .lor_top_mem .login-bar .lolweixin:hover .marrl {
+      background-position: -24px 0;
+  }
+ 
+  .lor_top_mem .login-bar .lolweixin:hover .mwx-code {
+      display: block;
+  }
+  .lor_top_mem .lolweixin .mwxin {
+      margin: 5px 4px 0 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-position: -2px -42px;
+  }
+  /* menu css*/
+  .lor_menubar {
+      position: fixed;
+      top: 75px;
+      left: 0;
+      z-index: -1;
+      margin: 0 auto;
+      min-width: 1240px;
+      width: 100%;
+      height: 45px;
+      background: #202020;
+  }
+  .lor_topbar .menu_zhong {
+      margin: 0 20px;
+      line-height: 45px;
+      height: 45px;
+      color: #fff;
+      font-size: 14px;
+  }
+  .lor_topbar ul {
+      list-style-image: none;
+      list-style-position: outside;
+      list-style-type: none;
+  }
+  .lor_topbar .menu_zhong .menu_zhongli {
+      float: left;
+      padding: 0;
+      position: relative;
+      width: 122px;
+      text-align: center;
+  }
+  .lor_topbar .menu_zhong .menu_zhongli a {
+      display: block;
+      width: 100%;
+      height: 45px;
+      padding: 0;
+      color: #fff;
+      font-size: 18px;
+  }
+  .lor_topbar .menu_zhong .menu_zhongli a.click {
+      text-decoration: none;
+      color: #f94915;
+      font-weight: bold;
+  }
+  .lor_topbar a:link, .lor_topbar a:visited {
+      cursor: pointer;
+  }
+  .lor_topbar .menu_zhong .menu_zhongli .menu-ico {
+      position: absolute;
+      top: 16px;
+      right: 5px;
+      z-index: 2;
+      width: 14px;
+      height: 14px;
+      display: block;
+  }
+  .lor_topbar .menu_zhong .menu_zhongli a:hover {
+      text-decoration: none;
+      color: #f94915;
+      font-weight: bold;
+  }
+  .lor_topbar .menu_zhongli:hover .submenu {
+      display: block;
+  }
+  .lor_topbar .menu_zhong .submenu {
+      position: absolute;
+      top: 45px;
+      left: -23px;
+      z-index: 100;
+      width: 188px;
+      min-height: 120px;
+      height: auto;
+      background: #181a20;
+      border-top: 3px solid #f94915;
+      overflow: hidden;
+      display: none;
+  }
+  .lor_topbar .menu_zhong .submenu .submenu-list {
+      padding: 12px 0 10px 15px;
+      width: 85px;
+      height: auto;
+      overflow: hidden;
+  }
+  .lor_topbar .menu_zhong .submenu .submenu-list li {
+      padding: 0;
+      width: 100%;
+      height: 24px;
+      line-height: 24px;
+      text-align: left;
+  }
+  .lor_topbar .menu_zhong .submenu .submenu-list li a {
+      width: 100%;
+      height: 24px;
+      line-height: 24px;
+      padding: 0;
+      font-size: 14px;
+      color: #fff;
+  }
+  .lor_topbar .menu_zhong .submenu .subm-img {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      margin-top: -40.5px;
+      width: 81px;
+      height: 81px;
+      overflow: hidden;
+      display: block;
+  }
+  .lor_topbar .menu_zhong .submenu .subm-img img {
+      width: 81px;
+      height: 81px;
+      background: none;
+  }
+  /* 搜索栏 css */
+  .yahei {
+      font-family: "微软雅黑","宋体";
+  }
+  .lor_sosobar {
+      margin: 8px 34px 0 0;
+      height: 30px;
+      position: relative;
+  }
+  .lor_sosobar .soso {
+      width: 285px;
+      height: 38px;
+      overflow: hidden;
+      position: relative;
+  }
+  .lor_sosobar .sosoinp {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 20;
+      padding: 2px 6px 2px 6px;
+      border: 1px solid #777;
+      border-right-color: rgb(119, 119, 119);
+      border-right-style: solid;
+      border-right-width: 1px;
+      border-right: 0px;
+      font-size: 14px;
+      width: 226px;
+      height: 30px;
+      line-height: 32px;
+      color: #fff;
+      background: none;
+      vertical-align: middle;
+  }
+  .lor_sosobar .soso .keyword-list {
+      position: absolute;
+      left: 0;
+      top: 6px;
+      z-index: 10;
+  }
+  .lor_sosobar .soso .keyword-list a {
+      padding: 0 10px;
+      height: 14px;
+      line-height: 14px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #979797;
+  }
+  .lor_sosobar .sosobot {
+      position: absolute;
+      right: 15px;
+      top: 0;
+      width: 45px;
+      height: 30px;
+      cursor: pointer;
+      background: #fa4f17;
+      padding: 0px;
+      border: 0px;
+  }
+  .lor_sosobar .sosobot .mseach {
+      margin: 5px 0 0 12px;
+      display: block;
+      width: 21px;
+      height: 21px;
+      background-position: -2px -358px;
+  }
+  .lor_sosobar .ico-menu {
+      background: url(https://js01.daoju.qq.com/zb/lolriotmall/pc/images/ico-menu.png) no-repeat;
+          background-position-x: 0%;
+          background-position-y: 0%;
+  }
+
+/* bottom css */
+.bottom {
+    min-width: 1280px;
+    background: url(https://js02.daoju.qq.com/zb/lolriotmall/pc/images/bottom_bj.jpg) left top repeat-x;
+    height: 402px;
+}
+.bottomshop {
+    width: 1190px;
+    height: 402px;
+    margin: 0px auto;
+}
+.w980 {
+    width: 1190px;
+    margin: 0px auto;
+    height: auto;
+}
+.fuwubar {
+    padding-top: 28px;
+    background: #fff;
+    height: 70px;
+}
+
+.fuwu {
+    padding-left: 110px;
+    width: 940px;
+    margin: 0px auto;
+}
+.fuwu li span {
+    display: block;
+    width: 42px;
+    height: 52px;
+    float: left;
+}
+.fuwu li span.fwl {
+    background: url(https://js02.daoju.qq.com/zb/lolriotmall/pc/images/base/base.png) no-repeat -10px -234px;
+}
+.fuwu li a.ful {
+    width: 230px;
+}
+.fuwu li a {
+    display: block;
+    line-height: 52px;
+    height: 52px;
+    float: left;
+    color: #222;
+    font-size: 14px;
+    cursor: default;
+}
+.help {
+    padding-left: 22px;
+    margin-top: 20px;
+    color: #666;
+}
+.help li.he_w1 {
+    width: 266px;
+}
+.help li {
+    height: 166px;
+    float: left;
+    padding-top: 4px;
+    padding-left: 16px;
+}
+.help li h3 {
+    display: block;
+    line-height: 30px;
+    font-size: 16px;
+    color: #d6d6d6;
+    font-weight: normal;
+}
+.help li a {
+    text-indent: 10px;
+    font-size: 12px;
+    color: #666;
+    display: block;
+    line-height: 28px;
+}
+.help li h3 a {
+    line-height: 30px;
+    font-size: 16px;
+    color: #222;
+    text-indent: 0px;
+    background: none;
+}
+.help li.he_w2 {
+    width: 254px;
+}
+.help li.he_w3 {
+    width: 254px;
+}
+.bottomlink {
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    margin-top: 25px;
+    text-align: center;
+}
+.bottomlink a {
+    color: #666;
+    padding-right: 20px;
+    line-height: 40px;
+}
+.bottom .foot {
+    width: 855px;
+    height: auto;
+    margin: 20px auto 20px;
+    line-height: 20px;
+}
+.bottom .bqlogo {
+    background: url(https://js02.daoju.qq.com/zb/lolriotmall/pc/images/base/base.png) no-repeat -10px -290px;
+    width: 246px;
+    height: 46px;
+    border-right: #e9e9e9 solid 1px;
+}
+.bottom .copyright {
+    width: 470px;
+    height: 40px;
+    margin: 4px 0 0 16px;
+    color: #666;
+}
+.bottom .business-link {
+    display: block;
+    width: 117px;
+    height: 50px;
+    background: url("https://js01.daoju.qq.com/zb/lolriotmall/pc/images/bussiness.png") no-repeat;
+}
+/* 登录 css */
+.logined-box {
+    width: auto;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+}
+.lor_top_mem .login-user {
+    padding-right: 34px;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+}
+#login_userName_span {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lor_top_mem .login-user:hover {
+    height: 150px;
+}
+#login_userName_span:hover .menu-downbox{
+    display: block;
+}
+#login_userName_span:hover .marrl {
+    background-position: -24px 0;
+}
+.lor_top_mem .login-bar .marr1 {
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    z-index: 1;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-position: -32px 0;
+}
+.lor_top_mem .menu-downbox {
+    position: absolute;
+    top: 53px;
+    left: -30px;
+    z-index: 100;
+    width: 99px;
+    height: 133px;
+    overflow: hidden;
+    display: none;
+}
+.lor_top_mem .menu-downbox .downbox-bg {
+    width: 99px;
+    height: 100%;
+    background: #000;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+}
+.lor_top_mem .menu-downbox .menu-downlist {
+    width: 99px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+.lor_top_mem .menu-downbox .menu-downlist li.first {
+    border-color: #f94915;
+}
+.lor_top_mem .menu-downbox .menu-downlist li {
+    width: 99px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    float: left;
+    border-top: 1px solid #666;
+        border-top-color: rgb(102, 102, 102);
+}
+.lor_top_mem .menu-downbox .menu-downlist li a {
+    display: block;
+    width: 99px;
+    height: 32px;
+    line-height: 32px;
+    color: #a1a1a1;
+}

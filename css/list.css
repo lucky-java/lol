@@ -1,0 +1,334 @@
+/* 通用 css */
+*{margin: 0px;padding: 0px;}
+body{
+    font-family: "微软雅黑","宋体";
+    font-size: 12px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+a:link, a:visited {
+    cursor: pointer;
+}
+.clearfix::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    zoom: 1;
+}
+/* 页面内容区 */
+.usamainbar {
+    background: #FFF;
+    height: auto;
+    padding-top: 120px;
+    *padding-top: 158px;
+}
+.wfull {
+    min-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+/* 浏览目录 */
+.breadcrumb {
+    min-width: 1240px;
+    width: 100%;
+    height: 62px;
+    line-height: 62px;
+    text-align: left;
+}
+.breadcrumb .bcb-link {
+    text-indent: 50px;
+}
+.breadcrumb a {
+    color: #4b4b4b;
+    font-size: 16px;
+    display: block;
+    width: auto;
+}
+/* 商城首页 */
+.ico-menu {
+    background: url(https://js01.daoju.qq.com/zb/lolriotmall/pc/images/ico-menu.png) no-repeat;
+        background-position-x: 0%;
+        background-position-y: 0%;
+}
+.breadcrumb .bcb-arr {
+    margin: 27px 15px 0 22px;
+    display: block;
+    width: 7px;
+    height: 10px;
+    background-position: -111px 0;
+}
+.breadcrumb .bcb-cur {
+    color: #4b4b4b;
+}
+.breadcrumb .bcb-arr {
+    margin: 27px 15px 0 22px;
+    display: block;
+    width: 7px;
+    height: 10px;
+    background-position: -111px 0;
+}
+/* 广告栏 css */
+.list-banner {
+    min-width: 1280px;
+    width: 100%;
+    min-height: 129px;
+    height: auto;
+    overflow: hidden;
+}
+.list-banner .list-banimg {
+    margin: 0 auto;
+    min-width: 1280px;
+    width: 100%;
+    min-height: 129px;
+    height: auto;
+    display: block;
+}
+/* 商品区 */
+.list-shop {
+    margin: 36px auto 90px;
+    min-width: 1280px;
+    width: 100%;
+    min-height: 700px;
+    height: auto;
+}
+.list-shop .sidebar {
+    width: 195px;
+    height: 700px;
+}
+.sidebar .navlist {
+    margin: 7px 0 40px 51px;
+    height: auto;
+    color: #202020;
+}
+.sidebar .navlist dt {
+    margin-bottom: 15px;
+    width: 145px;
+    height: 24px;
+    line-height: 22px;
+    text-indent: 12px;
+    font-size: 22px;
+    position: relative;
+    font-weight: bold;
+}
+.sidebar .navlist dd {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 12px;
+    font-size: 14px;
+}
+.sidebar .navlist dt .navl-line {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 3px;
+    height: 18px;
+    background-position: -2px -125px;
+}
+.ico-menu {
+    background: url(https://js01.daoju.qq.com/zb/lolriotmall/pc/images/ico-menu.png) no-repeat;
+        background-position-x: 0%;
+        background-position-y: 0%;
+}
+.sidebar .navlist dd a {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.shopcont {
+    margin-right: 17px;
+    width: 82%;
+    height: auto;
+}
+.shopcont {
+    width: 80%;
+}
+.shop-action {
+    width: 100%;
+    height: 38px;
+}
+.shop-action .sorting-filter {
+    width: 130px;
+    height: auto;
+    position: relative;
+    z-index: 12;
+}
+.shop-action .sorting-stock {
+    margin-left: 22px;
+    width: auto;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    color: #919799;
+}
+.shop-action .sfbox {
+    width: 128px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #bcbfc1;
+    font-size: 15px;
+    color: #919799;
+    text-align: center;
+    text-indent: -20px;
+    cursor: pointer;
+}
+.shop-action .sortinglist {
+    position: absolute;
+    top: 37px;
+    left: 0px;
+    width: 128px;
+    text-align: center;
+    border: 1px solid #bcbfc1;
+        border-bottom-color: rgb(188, 191, 193);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    border-bottom: none;
+    font-size: 15px;
+    z-index: 100;
+    background: #fff;
+    display: none;
+}
+.shop-action .sfbox .sfarr {
+    position: absolute;
+    top: 16px;
+    right: 26px;
+    display: block;
+    width: 14px;
+    height: 7px;
+    background-position: -2px -2px;
+}
+.shop-action .sortinglist li {
+    width: 128px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-bottom: 1px solid #bcbfc1;
+    color: #919799;
+    cursor: pointer;
+}
+.shop-action .sorting-stock .sorting-check {
+    margin-top: -2px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: url(https://js01.daoju.qq.com/zb/lolriotmall/pc/images/bg-checkbox.png) no-repeat;
+        background-position-x: 0%;
+        background-position-y: 0%;
+    background-position: -10px -10px;
+    cursor: pointer;
+}
+.good-list li {
+    float: left;
+    margin-bottom: 56px;
+    width: 33.3%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.good-list li .gl-like {
+    position: absolute;
+    bottom: 88px;
+    right: 35px;
+    z-index: 20;
+    display: block;
+    width: 19px;
+    height: 17px;
+    background-position: -2px -104px;
+    cursor: pointer;
+}
+.good-list li a {
+    padding-right: 16px;
+    height: 100%;
+    display: block;
+    position: relative;
+    color: #303030;
+    z-index: 1;
+    overflow: hidden;
+}
+.good-list li .ico-mark {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 20;
+    width: 20%;
+    overflow: hidden;
+}
+.good-list li .ico-mark img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* vertical-align: bottom; */
+}
+.good-list li a .gl-img, .good-list li a .gl-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* vertical-align: bottom; */
+}
+.good-list li a .gl-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* vertical-align: bottom; */
+}
+.good-list li .gl-name {
+    margin: 10px auto 0;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+}
+.good-list li .gl-pri {
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+}
+.page {
+    margin: 0 16px 0 0;
+    width: auto;
+    height: 38px;
+    float: right;
+    line-height: 36px;
+    font-size: 14px;
+}
+.page span {
+    float: left;
+    color: #919799;
+}
+.page a {
+    display: block;
+    color: #919799;
+    /* height: 36px;
+    float: left; */
+    border: 1px solid #aeb2b3;
+    text-align: center;
+    margin-left: 5px;
+    display: inline;
+    background: #fff;
+}
+.current a {
+    background: #aeb2b3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}

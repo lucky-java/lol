@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/list.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <div id="header"></div>
+    <!-- 中间 -->
+    <div class="usamainbar wfull clearfix">
+        <!-- 浏览目录 -->
+        <div id="blk_detail_crumbs" class="breadcrumb bbm clearfix">
+            <a href="index.html" class="fl bcb-link" target="_blank">商城页面</a>
+            <i class="fl ico-menu bcb-arr"></i>
+        </div>
+        <!-- 导航图片 -->
+        <div id="blk_list_top_banner" width="1920" height="200">
+            <div class="list-banner">
+                <a class="list-banlink" href="javascript:;"style="cursor:default;">
+                    <img class="list-banimg" src="https://game.gtimg.cn/images/zb/x5/uploadImg/goods/202006/20200618180710_26502.jpg" alt="" width="1920" height="200">
+                </a>
+            </div>
+        </div>
+        <!-- 列表部分 -->
+        <div class="list-shop clearfix">
+            <!-- 列表左导航 -->
+            <div id="leftBox" class="fl sidebar">
+                <div id="blk_productlist_left_category">
+                    <dl class="navlist">
+                        <dt>
+                            <i class="ico-menu navl-line"></i>
+                            <span catid="119" style="cursor:pointer;">毛绒玩具</span>
+                        </dt>
+                        <dd>
+                            <a href="javascript:void(0);">帽子</a>
+                        </dd>
+                        <dd>
+                            <a href="javasript:void(0);">玩偶</a>
+                        </dd>
+                    </dl>
+                </div>
+                <dl id="blk_productlist_left_price" class="navlist">
+                    <dt>
+                        <i class="ico-menu navl-line"></i>
+                        <span  style="cursor:pointer;">价格</span>
+                    </dt>
+                    <dd>
+                        <a href="javascript:void(0);">100-300元</a>
+                    </dd>
+                    <dd>
+                        <a href="javasript:void(0);">300元以上</a>
+                    </dd>
+                </dl>
+                <dl id="blk_productlist_left_hero" class="navlist">
+                    <dt>
+                        <i class="ico-menu navl-line"></i>
+                        <span catid="119" style="cursor:pointer;">英雄</span>
+                    </dt>
+                    <dd>
+                        <a href="javascript:void(0);">上单</a>
+                    </dd>
+                    <dd>
+                        <a href="javasript:void(0);">中单</a>
+                    </dd>
+                    <dd class="cur">
+                        <a href="javasript:void(0);">ADC</a>
+                    </dd>
+                </dl>
+            </div>
+            <!-- 商品列表 -->
+            <div class="fr shopcont">
+                <!-- 分页、有无货、排序 -->
+                <div class="shop-action clearfix">
+                    <div id="blk_productlist_sort" class="fl sorting-filter">
+                        <div class="sfbox">
+                            <span>人气</span>
+                            <i class="ico-menu sfarr"></i>
+                        </div>
+                        <ul class="sortinglist">
+                            <li>人气</li>
+                            <li>销量</li>
+                            <li>新品</li>
+                        </ul>
+                    </div>
+                    <div id="productlist_check" class="fl sorting-stock">
+                        <i class="sorting-check"></i>
+                        <span>仅显示有货</span>
+                    </div>
+                    <div class="pagelist fr clearf">
+                        <div id="page_productlist_product" class="page">
+                            <span class="p_prev">
+                                <a href="">上一页</a>
+                            </span>
+                            <span class="page_btn current">
+                                <a href="">1</a>
+                            </span>
+                            <span class="p_next">
+                                <a href="">下一页</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 商品列表区 -->
+                <div class="good-list clearfix" id="blk_productlist_product">
+                    <ul>
+                    </ul>
+                </div>
+                <!-- 分页 -->
+                <div class="shop-action clearfix">
+                    <div class="pagelist fr clearf">
+                        <div class="page" id="page_productlist_product_bottom">
+                            <span class="p_prev">
+                                <a href="">上一页</a>
+                            </span>
+                            <span class="page_btn current">
+                                <a href="">1</a>
+                            </span>
+                            <span class="p_next">
+                                <a href="">下一页</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div id="bottom"></div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/list.js"></script>
+    <script>
+        $(function(){
+            $("#header").load("header.html",()=>{
+                if(localStorage.getItem("user")){
+                    $("#logined").show();
+                    $("#unlogin").hide();
+                }  
+                $("#logout").click(function(){
+                    localStorage.setItem("user","");
+                    $("#logined").hide();
+                    $("#unlogin").show();
+                });
+            });
+            $("#bottom").load("bottom.html");
+        })
+    </script>
+</body>
+</html>

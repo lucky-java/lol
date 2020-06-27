@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+     <!-- 头部 -->
+     <div id="header"></div>
+     <!-- 登录 -->
+     <div class="topSpace"></div>
+     <div class="milo_login_dialog">
+        <div class="milo_login_tab">
+            <ul class="milo_tab_list">
+                <li class="milo_list_item milo_list_item_qq milo_current" data-type="qq">
+                    <a href="javascript:void(0);" class="milo_tab_item milo_tab_item_qq">
+                        <i class="ico_loginqq"></i>
+                        <span>QQ账号登录</span>
+                    </a>
+                </li>
+                <li class="milo_list_item milo_list_item_wx" data-type="wx">
+                    <a href="javascript:void(0);" class="milo_tab_item milo_tab_item_wx">
+                        <i class="milo_ico_loginwx"></i>
+                        <span>微信账号登录</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="milo_login_tips">
+            <div class="milo_tips_txt">微信和QQ是两个独立账号，账号信息不互通</div>
+        </div>
+        <div class="milo_login_cont">
+            <div class="milo_cont_inner milo_cont_inner_qq milo_cont_inner_in">
+                <div class="milo_login_iframe">
+                    <div style="width: 626px;height: 321px;">
+                        <div id="login" class="login">
+                            <div class="header"></div>
+                            <div class="web_qr_login" class="web_qr_login">
+                                <div id="web_qr_login_show" class="web_qr_login_show">
+                                    <div id="web_login" class="web_login">
+                                        <div id="tips" class="tips">
+                                            <div id="title_2" class="title">账号密码登录</div>
+                                            <div id="qlogin_entry">
+                                                推荐使用<a id="switcher_qlogin" hidefocus="true" tabindex="7" class="switch_btn_focus link_tips" href="javascript:void(0);">快速安全登录</a>
+                                            </div>
+                                        </div>
+                                        <div></div>
+                                        <div class="login_from">
+                                                <div id="uinArea" class="uinArea">
+                                                    <div class="inputOuter">
+                                                        <input type="text" id="u" class="inputstyle" type="text" name="u" value="" tabindex="1">
+                                                        <a  class="uin_del"id="uni_del"style="display:block;"></a>
+                                                    </div>
+                                                </div>
+                                                <div id="pwdArea" class="pwdArea">
+                                                    <label id="pwd_tips" class="input_tips"for="p">密码</label>
+                                                    <div class="inputOuter">
+                                                        <input type="password" class="inputstyle password" id="p" name="p"maxlength="16"tabindex="2">
+                                                    </div>
+                                                </div>
+                                                <div class="submit">
+                                                    <a class="login_button"hidefocus="ture">
+                                                        <input type="submit"class="btn" id="login_button" tabindex="6"value="登录">
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                
+                            </div>
+                           
+                        </div>
+                        <div id="bottom_web" class="bottom1">
+                            <a id="forgetpwd" class="link" href="https://aq.qq.com/v2/uv_aq/html/reset_pwd/pc_reset_pwd_input_account.html?v=3.0&old_ver_account=" target="_blank">忘了密码？</a>
+                            <span class="dotted">|</span>
+                            <a  class="link" href="https://ssl.zc.qq.com/v3/index-chs.html?from=pt" target="_blank">注册新账号</a>
+                            <span class="dotted">|</span>
+                            <a id="feedback_web" class="link" href="https://support.qq.com/products/14800"target="_blank">意见反馈</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 尾部 -->
+     <div id="bottom"></div>
+     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+     <script src="../js/login.js"></script>
+     <script>
+         $(function(){
+             $("#header").load("header.html",()=>{
+                 if(localStorage.getItem("user")){
+                     $("#logined").show();
+                     $("#unlogin").hide();
+                 }
+                 $("#logout").click(function(){
+                localStorage.setItem("user","");
+                    $("#logined").hide();
+                    $("#unlogin").show();
+                    location.href = "index.html";
+                });
+             });
+             $("#bottom").load("bottom.html");
+         })
+     </script>
+</body>
+</html>
