@@ -298,6 +298,7 @@ $(function(){
     $("#del_cart").click(function(){
         cleanCart();
         //window.location.reload();
+        $("#cart-shop-list").html("");
     });
     //清空购物车
     function cleanCart(){
